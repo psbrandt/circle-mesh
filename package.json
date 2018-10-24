@@ -1,0 +1,25 @@
+{
+  "name": "circle-mesh",
+  "version": "1.0.0",
+  "description": "React component from Tympanus demo",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psbrandt/circle-mesh.git"
+  },
+  "author": "https://tympanus.net/Development/DecorativeBackgrounds/index.html",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/psbrandt/circle-mesh/issues"
+  },
+  "homepage": "https://github.com/psbrandt/circle-mesh#readme",
+  "dependencies": {
+    "gsap": "^2.0.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "three": "^0.97.0"
+  }
+}
