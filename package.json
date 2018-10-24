@@ -1,13 +1,13 @@
 {
   "name": "circle-mesh",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React component from Tympanus demo",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf -rf ./dist",
-    "build": "parcel build index.jsx",
-    "start": "parcel index.html"
+    "build": "parcel build index.jsx --global circle-mesh",
+    "start-demo": "npm run build && parcel example/src/index.html --out-dir example/dist --open"
   },
   "repository": {
     "type": "git",

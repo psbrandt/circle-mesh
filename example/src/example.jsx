@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./demo.css";
-import CircleMesh from "./";
+import "./example.css";
+import CircleMesh from "../../";
 
 const App = () => (
   <div className="App">

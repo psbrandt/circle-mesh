@@ -22,8 +22,7 @@ You can also run the following to get the demo working:
 ```
 $ git clone https://github.com/psbrandt/circle-mesh.git
 $ npm install
-$ npm run build
-$ npm start
+$ npm run start-demo
 ```
 
 ## Result

@@ -1,8 +1,6 @@
 import React from "react";
 import * as THREE from "three";
 import TweenMax from "gsap/TweenMax";
-import "./styles.css";
-import dot from "./dot.png";
 
 class CircleMesh extends React.Component {
   constructor(props) {
@@ -45,7 +43,9 @@ class CircleMesh extends React.Component {
     // Create dots
     var loader = new THREE.TextureLoader();
     loader.crossOrigin = "";
-    var dotTexture = loader.load(dot);
+    var dotTexture = loader.load(
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAz1BMVEX////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////LRjS1AAAARHRSTlMAAXQGVQ0Qf+1UxKXMkNth67fqI6StG/IzjPCE8e7XYFbVJI0dfcvjgMPY7Pnlpjsi4DrW2hweiQyPEoqLgdmI5PX63dUi/vUAAAFvSURBVHhepddnU/JAAATgvUgSUkFBqhQFewd7e9v+/9/0jiPjiIaQ3D7f72aSa7tYpRXsRweHbbJ9eBDtBy2U0pkM+c1w0kFBrrPLTLuOi/U8v8qVqr6HfGZUZ676yCDHXsi1wgZWquywgJ0KspkuC+oaZNiIWFi0kTF+kyVs/pjBNFlK02DZL5Z0jyUBS1tai6seS+td4ZM5poVjgwWMaKWGBW+LVrY8fPBpycc7PFRpqerinUNrDgCYG1pLDYAZBTMAjxQkAIYUnAC3lEwRUDJGn5I+tinZRkxJjHNKrtGm5BTUnMkTyJ8g/0R5GeWNpG/lsXqYppTcAScUvAFI1CvtkoJLACbVrnX9YYE7oKWBKz6uR+rz/oSFmhgwYEJaCA0+NWxCVgNfVMSYBzyzpBc56qphW437auEQK49cunKY2rraVzPI5x3lFc9Xr1D1nTPT3HFRUCdJ+U2adFBKK/Av4t9/+HfwL77wV9f//7ErSpBKzt70AAAAAElFTkSuQmCC"
+    );
     var dotsAmount = 3000;
     var dotsGeometry = new THREE.Geometry();
     var positions = new Float32Array(dotsAmount * 3);
@@ -236,7 +236,19 @@ class CircleMesh extends React.Component {
   }
 
   render() {
-    return <canvas className="scene scene--full" id="mesh-circle-canvas" />;
+    return (
+      <React.Fragment>
+        <style>
+          {`.mesh-circle-scene {
+              position: absolute;
+              z-index: -99;
+              width: 100%;
+              height: 100vh;
+            }`}
+        </style>
+        <canvas className="mesh-circle-scene" id="mesh-circle-canvas" />
+      </React.Fragment>
+    );
   }
 }
 
