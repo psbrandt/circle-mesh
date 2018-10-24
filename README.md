@@ -21,10 +21,9 @@ You can also run the following to get the demo working:
 
 ```
 $ git clone https://github.com/psbrandt/circle-mesh.git
-$ cd circle-mesh
-$ npm install -g parcel-bundler
 $ npm install
-$ parcel index.html
+$ npm run build
+$ npm start
 ```
 
 ## Result

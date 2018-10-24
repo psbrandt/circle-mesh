@@ -13,15 +13,11 @@ class CircleMesh extends React.Component {
   }
 
   init(colors) {
-    var canvas = document.querySelector("canvas");
+    var canvas = document.getElementById("mesh-circle-canvas");
     var width = canvas.offsetWidth,
       height = canvas.offsetHeight;
 
-    var colors = (colors &&
-      colors.map(c => {
-        console.log(c);
-        return new THREE.Color(c);
-      })) || [
+    var colors = (colors && colors.map(c => new THREE.Color(c))) || [
       new THREE.Color(0x4b2e83),
       new THREE.Color(0xe8e3d3),
       new THREE.Color(0x85754d)
